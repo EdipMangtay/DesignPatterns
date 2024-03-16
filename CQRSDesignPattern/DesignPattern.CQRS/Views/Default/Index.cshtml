@@ -1,0 +1,37 @@
+﻿@model List<DesignPattern.CQRS.CQRSPattern.Results.GetProductQueryResult>
+@{
+    Layout = null;
+}
+
+<div class="container">
+
+    <br />
+    <table class="table table-bordered">
+        <tr>
+
+            <th>#</th>
+            <th>Ürün Adı</th>
+            <th>Fiyat</th>
+            <th>Stock</th>
+            <th>Sil</th>
+            <th>Güncelle</th>
+        </tr>
+        @foreach(var item in Model)
+        {
+            <tr>
+                <td> @item.ID</td>
+                <td> @item.ProductName </td>
+                <td> @item.Price tl</td>
+                <td> @item.Stock</td>
+                <td><a href="/Default/AddProduct/" class="btn btn-primary">Yeni Ürün Girişi</a></td>
+                <td><a href="/Default/AddProduct/" class="btn btn-primary">Ürünü Sil </a></td>
+                <td><a href="/Default/AddProduct/" class="btn btn-primary">Ürünü Güncelle </a></td>
+                <td><a href="/Default/AddProduct/" class="btn btn-primary">Yeni Ürün Girişi</a></td>
+            </tr>
+        }
+
+    </table>
+    <a href="/Default/AddProduct/" class="btn btn-primary">Yeni Ürün Girişi</a>
+
+
+</div>
