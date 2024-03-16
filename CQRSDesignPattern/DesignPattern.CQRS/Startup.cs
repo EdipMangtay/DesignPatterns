@@ -1,4 +1,5 @@
 using DesignPattern.CQRS.CQRSPattern.Handlers;
+using DesignPattern.CQRS.CQRSPattern.Handlers.DesignPattern.CQRS.CQRSPattern.Handlers;
 using DesignPattern.CQRS.DAL;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
@@ -28,6 +29,12 @@ namespace DesignPattern.CQRS
             services.AddDbContext<Context>();
             services.AddScoped<GetProductQueryHandler>();
             services.AddControllersWithViews();
+            services.AddScoped<CreateProductCommandHandler>();
+            services.AddScoped<GetProductByIDQueryHandler>();
+            services.AddScoped<RemoveProductCommandHandler>();
+            services.AddScoped<GetProductUpdateByIDQueryHandler>();
+            services.AddScoped<UpdateProductCommandHandler>();
+
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

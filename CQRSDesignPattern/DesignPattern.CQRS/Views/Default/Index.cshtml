@@ -4,7 +4,10 @@
 }
 
 <div class="container">
-
+    <a href="~/lib/bootstrap/dist/css/bootstrap.css.map">~/lib/bootstrap/dist/css/bootstrap.css.map</a>
+    <a href="~/lib/bootstrap/dist/css/bootstrap.min.css.map">~/lib/bootstrap/dist/css/bootstrap.min.css.map</a>
+    <link href="~/lib/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="~/lib/bootstrap/dist/css/bootstrap.css" rel="stylesheet" />
     <br />
     <table class="table table-bordered">
         <tr>
@@ -14,6 +17,7 @@
             <th>Fiyat</th>
             <th>Stock</th>
             <th>Sil</th>
+            <th>Getir</th>
             <th>Güncelle</th>
         </tr>
         @foreach(var item in Model)
@@ -23,10 +27,12 @@
                 <td> @item.ProductName </td>
                 <td> @item.Price tl</td>
                 <td> @item.Stock</td>
-                <td><a href="/Default/AddProduct/" class="btn btn-primary">Yeni Ürün Girişi</a></td>
-                <td><a href="/Default/AddProduct/" class="btn btn-primary">Ürünü Sil </a></td>
-                <td><a href="/Default/AddProduct/" class="btn btn-primary">Ürünü Güncelle </a></td>
-                <td><a href="/Default/AddProduct/" class="btn btn-primary">Yeni Ürün Girişi</a></td>
+                <td><a href="/Default/GetProduct/@item.ID" class="btn btn-dark">Getir </a></td>
+
+                <td><a href="/Default/DeleteProduct/@item.ID" class="btn btn-danger">Sil</a></td>
+
+                <td><a href="/Default/UpdateProduct/@item.ID" class="btn btn-warning">Ürünü Güncelle </a></td>
+
             </tr>
         }
 
