@@ -2,7 +2,7 @@
 {
     public abstract class NetflixPlans
     {
-        public void Plan()
+        public void CreatePlan()
         {
             PlanType(string.Empty);
             CountPerson(0);
@@ -16,7 +16,7 @@
 
         public abstract double Price(double Price);
         public abstract string ReSolution(string ReSolution);
-        public abstract decimal Content(string Content);
+        public abstract string Content(string Content);
 
 
 
