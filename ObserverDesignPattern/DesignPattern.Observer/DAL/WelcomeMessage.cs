@@ -1,6 +1,11 @@
-﻿namespace DesignPattern.Observer.DAL
+﻿using Microsoft.AspNetCore.Mvc.Formatters;
+
+namespace DesignPattern.Observer.DAL
 {
     public class WelcomeMessage
     {
+        public int WelcomeMessageID { get; set; }
+        public string  NameSurname { get; set; }
+        public string Content { get; set; }
     }
 }

@@ -1,6 +1,8 @@
-﻿namespace DesignPattern.Observer.DAL
+﻿using Microsoft.AspNetCore.Identity;
+
+namespace DesignPattern.Observer.DAL
 {
-    public class AppRole
+    public class AppRole :IdentityRole<int>
     {
     }
 }
